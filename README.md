@@ -2,8 +2,6 @@
 
 **Курс:** Современные технологии программирования  
 **Условие задания:** [aliebraheem-fun.github.io/Modern-Programming-Technologies/#/practice3](https://aliebraheem-fun.github.io/Modern-Programming-Technologies/#/practice3)  
-**Референс по стилю:** [github.com/Mohanad0101/practice2](https://github.com/Mohanad0101/practice2)
-
 ---
 
 ## Требования
