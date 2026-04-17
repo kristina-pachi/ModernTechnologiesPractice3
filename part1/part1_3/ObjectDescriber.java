@@ -7,7 +7,14 @@ public class ObjectDescriber {
         // Подсказка 1: обработайте null отдельным case.
         // Подсказка 2: для Integer укажите "положительное" или "не положительное".
         // ▼ ВАШ КОД ЗДЕСЬ ▼
-        return "TODO";
+        return switch (obj) {
+            case null -> "null";
+            case Integer i -> i > 0 ? "положительное число" : "не положительное число";
+            case String s -> s.isEmpty() ? "пустая строка" : "строка: " + s;
+            case Double d -> "вещественное число";
+            case int[] arr -> "массив длины " + arr.length;
+            default -> "неизвестный объект " + obj;
+        };
         // ▲ КОНЕЦ ВАШЕГО КОДА ▲
     }
 
