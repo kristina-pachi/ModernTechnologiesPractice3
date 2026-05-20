@@ -6,7 +6,11 @@ public class StringProcessor {
     public static int countVowels(String text) {
         // TODO: посчитайте русские и английские гласные.
         // ▼ ВАШ КОД ЗДЕСЬ ▼
-        return -1;
+        int count = 0;
+        for (char c : text.toLowerCase().toCharArray()) {
+            if (VOWELS.indexOf(c) >= 0) count++;
+        };
+        return count;
         // ▲ КОНЕЦ ВАШЕГО КОДА ▲
     }
 
@@ -14,21 +18,33 @@ public class StringProcessor {
         // TODO: палиндром без учета регистра и знаков препинания.
         // Подсказка: сравнение символов с двух концов.
         // ▼ ВАШ КОД ЗДЕСЬ ▼
-        return false;
+        String cleaned = text.toLowerCase().replaceAll("[^a-zа-яё]", "");
+        return cleaned.equals(reverse(cleaned));
         // ▲ КОНЕЦ ВАШЕГО КОДА ▲
     }
 
     public static String reverse(String text) {
         // TODO: реверс без StringBuilder.
         // ▼ ВАШ КОД ЗДЕСЬ ▼
-        return "";
+        String result = "";
+        for (int i = text.length() - 1; i >= 0; i--) {
+            result += text.charAt(i);
+        };
+        return result;
         // ▲ КОНЕЦ ВАШЕГО КОДА ▲
     }
 
     public static String findLongestWord(String sentence) {
         // TODO: найдите самое длинное слово.
         // ▼ ВАШ КОД ЗДЕСЬ ▼
-        return "";
+        String[] words = sentence.split("\\s+");
+        String longest = "";
+        for (String w : words) {
+            if (w.length() > longest.length()) {
+                longest = w;
+            }
+        }
+        return longest;
         // ▲ КОНЕЦ ВАШЕГО КОДА ▲
     }
 

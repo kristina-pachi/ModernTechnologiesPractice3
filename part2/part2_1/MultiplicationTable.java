@@ -14,7 +14,6 @@ public class MultiplicationTable {
 
             System.out.println();
         }
-
         // ▲ КОНЕЦ ВАШЕГО КОДА ▲
     }
 
